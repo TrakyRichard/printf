@@ -1,15 +1,24 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdio.h>
 #include <stdarg.h>
-#include <limits.h>
 
-void _sprintf(const char *str);
+int _putchar(char c);
 int _printf(const char *format, ...);
-void _count(int *ptr, char *str);
-char *_itoa(int num);
+int print_num(long int n);
+int print_string(char *str);
+int print_binary(unsigned int num);
+int print_unknown_spec(char c);
+int print_odh(char c, unsigned int num);
+int dec_to_oct(unsigned int num);
+int dec_to_hex(char c, unsigned int num);
+int print_S(char *);
+int print_reverse(char *s);
+int print_rot13(char *c);
+int print_pointer(void *p);
+int print_unsigned(va_list arg);
 
-#endif
+#endif /* MAIN_H */
+

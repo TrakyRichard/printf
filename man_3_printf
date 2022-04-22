@@ -1,46 +1,48 @@
-.\" ALX printf Project Man Page
-.TH printf 1 "April 2022" "Printf Project" "ALX AFRICA"
+.TH man 3 "19 April 2022" "1.0" "_printf man page"
 .SH NAME
-.P
-_printf() 
+    _printf
+
 .SH SYNOPSIS
-.P
-_printf() - %[dcisbuxop]
+     #include "main.h"
+
+      int _printf(const char *format, ...);
+
 .SH DESCRIPTION
-.P
-prints strings to the stdout along with format specifiers for appropriate values
-.SH OPTIONS
-.SS Format Specifiers
-.P
-d - decimal digits
-.P
-c - Characters
-.P
-i - Integers
-.P
-s - Strings
-.P
-b - represents undefined specifiers and would behave just as printf(3)
-.P
-u - Unsigned
-.P
-x - Hexadecimal
-.P
-o - Unsigned Octal
-.P
-p - Addresses
-.SH EXAMPLES
-.RS
-_printf("Some String %s", str);
-format specifier - %s
-str - Some variable of type char *
+
+The printf function creates an output of a character string in
+accordance to a specific format. If the function is successful it will
+return the number of characters printed. The format is a string of
+characters that the function prints. The function goes through each
+character in the string and prints. When a % sign is reached and the
+following character is a special character then a specific conversion
+will occur.
+
+The following are the placeholder that the function can process and its respective result:
+
+.RS 3
+%c   prints a character variable.
+.br
+%s   prints a string variable.
+.br
+%d   prints an integer and takes an integer value as a signed decimal integer.
+.br
+%i   prints an integer and takes in a decimal, hexadecimal, or octal type.
+.br
+%b   prints a binary number.
+.br
+%u   prints an unsigned integer.
+.br
+%o   prints an octal number.
+.br
+%x   prints a hexadecimal number.
+.br
+%X   prints a hexadecimal number in caps.
+.br
 .RE
-.SH EXIT VALUES
-.P
-returns 1 if malloc operation is unsuccessful
-.SH AUTHORS
-.P
-Written by \fBABUKA VICTOR\fR and \fBALABI KHALID\fR.
-.SH SEE ALSO
-.P
-MAN printf(3)
+
+.SH RETURN
+The function will return the number of characters printed. If unsuccessful the function will return null.
+
+.SH AUTHOR
+Bridget Nwazue and Marvis Ezugo
+
